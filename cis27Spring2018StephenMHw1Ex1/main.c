@@ -8,9 +8,12 @@
 
 #include <stdio.h>
 
-void displayClassInfoStephenM(void);
-int* displayEvenOddDigitInfoStephenM(int);
-int getLargestIntegerWithLargestTUEDCStephenM(int*);
+void displayClassInfoStephenM(void); // Display class info header
+void displayMenuHw1(void); // display menu
+int* init(int); // initialize main user array using user input
+int* displayEvenOddDigitInfoStephenM(int); // get info on unique even/odd digits
+int getLargestIntegerWithLargestTUEDCStephenM(int*); // return largest user
+                                                    // with most even digits
 
 int main(int argc, const char * argv[]) {
     displayClassInfoStephenM();
