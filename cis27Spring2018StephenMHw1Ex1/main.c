@@ -1,8 +1,8 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 void displayClassInfoStephenM(void); // Display class info header
 void displayMenuHw1(void); // display menu
-int* init(int); // initialize main user array using user input
 int* displayEvenOddDigitInfoStephenM(int); // get info on unique even/odd digits
 int getLargestIntegerWithLargestTUEDCStephenM(int*); // return largest user
                                                     // with most even digits
@@ -28,9 +28,13 @@ void displayClassInfoStephenM() {
 void displayMenuHw1() {
     // main menu program
     int option = 0;
+    int* userAry = 0;
+    int size = 0;
+    int testv = 0;
+    int i = 0;
     
     do {
-        printf("****************************************\n"
+        printf("\n****************************************\n"
                "*             Menu - HW #1 -           *\n"
                "* 1. Call getLargestIntegerWithTUEDC() *\n"
                "* 2. Quit                              *\n"
@@ -40,6 +44,21 @@ void displayMenuHw1() {
         
         switch(option) {
             case 1: // call getLargest...()
+                printf("\nOption 1\n");
+                printf("How many integers? ");
+                scanf("%d", &size);
+                
+                userAry = (int*)malloc(size * sizeof(int));
+                
+                for (i = 0; i < size; i++) {
+                    printf("\nInteger #%d: ", i + 1);
+                    scanf("%d", &testv);
+                    *(userAry + i) = testv;
+                }
+                
+                for (i = 0; i < size; i++) {
+                    printf("\n%d", *userAry + i);
+                }
                 break;
             case 2: // quit menu
                 printf("\nQuitting\n");
@@ -50,3 +69,5 @@ void displayMenuHw1() {
         }
     } while (option != 2);
 }
+
+
