@@ -1,6 +1,6 @@
 /**
 * Program Name: cis27Spring2018StephenMHw1Ex1.c
-* Discussion:	  Homework # 1
+* Discussion:	Homework # 1
 * Written By:   Stephen Miller
 * Due Date:     2018/02/06
 **/
@@ -19,7 +19,6 @@ int main(int argc, const char * argv[]) {
 	displayClassInfoStephenM();
 
 	displayMenuHw1();
-	system("pause");
 	return 0;
 }
 
